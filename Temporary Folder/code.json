@@ -1,0 +1,134 @@
+[{
+    "id":"$SARK012_TEMP00",
+    "type":"template",
+    "speed":3,
+    "flag normal":false,
+    "flag train":true,
+    "moveable":false,
+    "chargeable": false,
+    "v2": [0,2,-2,0]
+},
+    {
+        "id": "$SARK012_COCH00",
+        "type": "train car",
+        "template":["$template_train00","$SARK012_TEMP00"],
+        "frames": [{
+            "bmp": "Passenger Wagon.png",
+            "count": 2,
+            "w": 20,
+            "h": 18
+        },
+            {
+                "bmp": "Passenger Wagon.png",
+                "count": 2,
+                "w": 20,
+                "h": 18
+            }]
+    },
+    {
+        "id": "$SARK012_COCH01",
+        "type": "train car",
+        "template":["$template_train00","$SARK012_TEMP00"],
+        "frames": [{
+            "bmp": "Passenger Wagon.png",
+            "count": 2,
+            "w": 20,
+            "h": 18,
+            "x": 40
+        },
+            {
+                "bmp": "Passenger Wagon.png",
+                "count": 2,
+                "w": 20,
+                "h": 18,
+                "x": 40
+            }]
+    },
+    {
+        "id": "$SARK012_TR00",
+        "type": "train car",
+        "template":["$template_train00","$SARK012_TEMP00"],
+        "frames": [{
+            "bmp":"RE6-6.png",
+            "count": 2,
+            "w": 21,
+            "h": 17
+        },
+            {
+                "bmp":"RE6-6.png",
+                "count": 2,
+                "w": 21,
+                "h": 17
+            }],
+        "tail": [
+            "$car_null00",
+            "$SARK012_COCH01",
+            "$car_null00",
+            "$SARK012_COCH01",
+            "$car_null00",
+            "$SARK012_COCH01",
+            "$car_null00",
+            "$SARK012_COCH01",
+            "$car_null00",
+            "$SARK012_COCH01"
+        ]
+    },
+    {
+        "id": "$SARK012_TR01",
+        "type": "train car",
+        "template":["$template_train00","$SARK012_TEMP00"],
+        "frames": [{
+            "bmp":"RE6-6.png",
+            "count": 2,
+            "w": 21,
+            "h": 17,
+            "x": 42
+        },
+            {
+                "bmp":"RE6-6.png",
+                "count": 2,
+                "w": 21,
+                "h": 17,
+                "x": 42
+            }],
+        "tail": [
+            "$car_null00",
+            "$SARK012_COCH00",
+            "$car_null00",
+            "$SARK012_COCH00",
+            "$car_null00",
+            "$SARK012_COCH00",
+            "$car_null00",
+            "$SARK012_COCH00",
+            "$car_null00",
+            "$SARK012_COCH00"
+        ]
+    },
+    {
+        "id":"$SARK012_STA00",
+        "type":"railway station",
+        "template":"$template_trainstation00",
+        "frames": [{
+            "steal":"$trainstation00","count":4
+        }],
+        "car spawner": [{
+            "cars":["$SARK012_TR00"],
+            "count":1,
+            "radius":128,
+            "targets":["$SARK012_STA00"]
+        }]
+    },
+    {
+        "id":"$SARK012_STA01",
+        "type":"railway station",
+        "template":"$template_trainstation00",
+        "frames": [{
+            "steal":"$trainstation00","count":4
+        }],
+        "car spawner": [{
+            "cars":["$SARK012_TR01"],
+            "count":1,
+            "radius":128,
+            "targets":["$SARK012_STA01"]
+        }]
+    }]
